@@ -1,0 +1,26 @@
+#include <iostream>
+#include <cstring>
+std::string c;
+std::string nou;
+int main()
+{
+    bool ok=false;
+    int n;
+    getline(std::cin,c);
+    std::cin>>n;
+    for(int i=0;i<c.length();i++)
+    {
+        nou.clear();
+        while(((int(c[i])>=65&&int(c[i])<=90)||(int(c[i])>=97&&int(c[i])<=122))&&i<c.length())
+        {
+            nou+=c[i];
+            i++;
+        }
+        if(nou.length()==n){std::cout<<nou<<'\n';ok=true;}
+    }
+    if(!ok)
+        std::cout<<"nu exista";
+    return 0;
+}
+//if(c[i]=='a'||c[i]=='o'||c[i]=='u'||c[i]=='e'||c[i]=='i'||c[i]=='A'||c[i]=='O'||c[i]=='U'||c[i]=='E'||c[i]=='I')
+            
